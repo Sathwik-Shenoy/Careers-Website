@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,9 +40,22 @@
         <h2 class="mt-4 mb-4">About Shenoy</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis placeat mollitia distinctio! Illo blanditiis ullam quas assumenda incidunt officia nostrum libero nulla ad dolore dicta, eius, natus esse tenetur deserunt! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ea qui atque delectus consectetur molestias explicabo. Deleniti optio, maiores perspiciatis enim, blanditiis consequuntur voluptatem sapiente ex, molestiae natus nam? Sequi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut ad quisquam molestias voluptas nisi dolore, dolorem, autem incidunt eaque eius nostrum, facere laborum voluptate quam ea sint amet cumque?</p>
         <h2>Open Positions</h2>
-        <p>Show the job Positions</p>
-    <div style="text-align: center;">
-        <button type="button" class="btn btn-primary btn-lg">Contact Us</button>
+        <div>
+            {% for job in jobs %}
+                <div class="card mt-3 row">
+                    <div class="card-body col-10">
+                        <h5 class="card-title">{{ job.title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Location: {{ job.location }}</h6>
+                       <p class="card-text">Salary: {{ job.salary }}</p>
+                    </div>
+                    <div class="col-2">
+                    <button type="button" class="btn btn-outline-primary">Apply</button>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div style="text-align: center;">
+        <button type="button" class="btn btn-primary btn-lg ">Contact Us</button>
         <p class="mt-4">@ Copyright 2024, Shenoy</p>
     </div>
     </div>
