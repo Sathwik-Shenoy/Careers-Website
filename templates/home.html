@@ -15,7 +15,8 @@
         }
         #banner{
             width : 100%;
-            height: auto;
+            height: 600px;
+            margin: 0 auto 0 auto;
         }
         h2{
             font-size: 40px;
@@ -29,7 +30,7 @@
             color: rgb(100, 100, 100);
         }
         #container{
-            max-width: 720px;
+            max-width: 80%;
             margin: 0 auto 0 auto;
         }
     </style>
@@ -39,13 +40,9 @@
     <div id="container">
         <img id="banner" src="/static/career.jpeg">
         <h1 class="mt-4 mb-4">Sathwik Careers</h1>
-        <div class="row">
-            <div class="col-9">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur quis voluptatibus fuga et omnis eveniet atque accusantium totam, quia doloribus rem vel quos culpa aperiam error fugiat consequatur. Modi?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum praesentium sit excepturi atque nobis laborum eos deserunt, incidunt itaque at ea. Quidem nobis expedita iusto blanditiis aperiam culpa eligendi.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis placeat mollitia distinctio! Illo blanditiis ullam quas assumenda incidunt officia nostrum libero nulla ad dolore dicta, eius, natus esse tenetur deserunt! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ea qui atque delectus consectetur molestias explicabo. Deleniti optio, maiores perspiciatis enim, blanditiis consequuntur voluptatem sapiente ex, molestiae natus nam? Sequi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut ad quisquam molestias voluptas nisi dolore, dolorem, autem incidunt eaque eius nostrum, facere laborum voluptate quam ea sint amet cumque?</p>
-            </div>
-            <div class="col-3 mt-4">
-                <img style="height:300px" src="/static/People.jpeg" alt="people working together">
-            </div>
+        <div class="box" style="display: flex; align-items: center; gap: 20px;">
+                <p style="flex : 1;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur quis voluptatibus fuga et omnis eveniet atque accusantium totam, quia doloribus rem vel quos culpa aperiam error fugiat consequatur. Modi?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum praesentium sit excepturi atque nobis laborum eos deserunt, incidunt itaque at ea. Quidem nobis expedita iusto blanditiis aperiam culpa eligendi.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis placeat mollitia distinctio! Illo blanditiis ullam quas assumenda incidunt officia nostrum libero nulla ad dolore dicta, eius, natus esse tenetur deserunt! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ea qui atque delectus consectetur molestias explicabo. Deleniti optio, maiores perspiciatis enim, blanditiis consequuntur voluptatem sapiente ex, molestiae natus nam? Sequi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut ad quisquam molestias voluptas nisi dolore, dolorem, autem incidunt eaque eius nostrum, facere laborum voluptate quam ea sint amet cumque?</p>
+                <img style="max-width:auto; height: 300px;" src="/static/People.jpeg" alt="people working together">
          </div>
         <h2>Job Opportunities</h2>
         <div>
@@ -56,14 +53,14 @@
                         <h6 class="card-subtitle mb-2 text-muted">Location: {{ job.location }}</h6>
                        <p class="card-text">Salary: {{ job.salary }}</p>
                     </div>
-                    <div class="col-2">
-                    <button type="button" class="btn btn-outline-primary">Apply</button>
+                    <div class="col-2 mb-4">
+                    <a href="mailto:mailto:hello@sathwik.ai?subject=Application%20for%20{{job['title']}}&body=My%20name%20%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20resume%20link%20%3A%20%3Cyour%20resume%20link%3E%0D%0AMy%20LinkedIn%20link%20%3A%20%3Cyour%20LinkedIn%20link%3E" type="button" class="btn btn-outline-primary">Apply</a>
                     </div>
                 </div>
             {% endfor %}
         </div>
         <div style="text-align: center;">
-        <button type="button" class="btn btn-primary btn-lg mt-4">Contact Us</button>
+        <a href="mailto:hello@sathwik.ai?subject=Questions%20about%20job%20openings&body=My%20name%20%3A%20%3Cyour%20name%20here%3E%0D%0AMy%20question%20%3A%20%3Cyour%20question%3E" type="button" class="btn btn-primary btn-lg mt-4">Contact Us</a>
     </div>
     </div>
     {% include 'footer.html' %}
