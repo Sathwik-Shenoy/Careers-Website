@@ -15,6 +15,7 @@
         }
         #banner{
             width : 100%;
+            height: auto;
         }
         h2{
             font-size: 40px;
@@ -34,11 +35,18 @@
     </style>
 </head>
 <body>
+    {% include 'navbar.html' %}
     <div id="container">
+        <img id="banner" src="/static/career.jpeg">
         <h1 class="mt-4 mb-4">Sathwik Careers</h1>
-        <img id="banner" src="http://192.168.1.42:5000/static/carrer.jpg">
-        <h2 class="mt-4 mb-4">About Sathwik</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis placeat mollitia distinctio! Illo blanditiis ullam quas assumenda incidunt officia nostrum libero nulla ad dolore dicta, eius, natus esse tenetur deserunt! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ea qui atque delectus consectetur molestias explicabo. Deleniti optio, maiores perspiciatis enim, blanditiis consequuntur voluptatem sapiente ex, molestiae natus nam? Sequi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut ad quisquam molestias voluptas nisi dolore, dolorem, autem incidunt eaque eius nostrum, facere laborum voluptate quam ea sint amet cumque?</p>
+        <div class="row">
+            <div class="col-9">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae tenetur quis voluptatibus fuga et omnis eveniet atque accusantium totam, quia doloribus rem vel quos culpa aperiam error fugiat consequatur. Modi?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta ipsum praesentium sit excepturi atque nobis laborum eos deserunt, incidunt itaque at ea. Quidem nobis expedita iusto blanditiis aperiam culpa eligendi.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis placeat mollitia distinctio! Illo blanditiis ullam quas assumenda incidunt officia nostrum libero nulla ad dolore dicta, eius, natus esse tenetur deserunt! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ea qui atque delectus consectetur molestias explicabo. Deleniti optio, maiores perspiciatis enim, blanditiis consequuntur voluptatem sapiente ex, molestiae natus nam? Sequi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis aut ad quisquam molestias voluptas nisi dolore, dolorem, autem incidunt eaque eius nostrum, facere laborum voluptate quam ea sint amet cumque?</p>
+            </div>
+            <div class="col-3 mt-4">
+                <img style="height:300px" src="/static/People.jpeg" alt="people working together">
+            </div>
+         </div>
         <h2>Job Opportunities</h2>
         <div>
             {% for job in jobs %}
@@ -55,9 +63,9 @@
             {% endfor %}
         </div>
         <div style="text-align: center;">
-        <button type="button" class="btn btn-primary btn-lg ">Contact Us</button>
-        <p class="mt-4">@ Copyright 2024, Sathwik</p>
+        <button type="button" class="btn btn-primary btn-lg mt-4">Contact Us</button>
     </div>
     </div>
+    {% include 'footer.html' %}
 </body> 
 </html> 
